@@ -1,3 +1,3 @@
-function AppCtrl($scope) {
-  $scope.name = "ReelMovies";
-}
+app.controller('MainController', ['$scope', function($scope) {
+$scope.name = 'ReelMovies';
+}]);
