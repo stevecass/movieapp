@@ -2,6 +2,7 @@ body {
   background-image: url('../imgs/bg.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  background-color: #465f71;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
