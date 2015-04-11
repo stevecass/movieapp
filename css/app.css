@@ -50,6 +50,13 @@ body {
   color: #FFF;
 }
 
+.landing-search input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 #searchicon {
   margin: 0;
   width: 25px;
