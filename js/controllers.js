@@ -20,6 +20,6 @@ app.controller('ResultsCtrl', ['$scope', 'movies', 'SearchQuery', function($scop
   $scope.$watch(function () { return SearchQuery.getSearchQuery(); }, function (newValue, oldValue) {
           if (newValue !== oldValue) $scope.query = newValue;
       });
-  $scope.queryData = $filter('filter')(names, query));
+  $scope.queryData = $filter('filter')(names, query);
 
 }]);
