@@ -1,4 +1,4 @@
-app.factory('SearchQuery', [function (queryWord){
+app.factory('SearchQuery', [function (queryWord) {
   function setData(queryWord) {
     console.log(queryWord);
       keyword = queryWord;
