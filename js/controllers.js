@@ -14,12 +14,12 @@ app.controller('AppCtrl', ['$scope', 'SearchQuery', function($scope, SearchQuery
 app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function($scope, GetMovieJson, SearchQuery) {
     $scope.getQuery = function() {
       $scope.factoryData = SearchQuery.getData();
-      console.log(factoryData);
+      console.log('factoryData' + $scope.factoryData);
     }
-    // GetMovieJson.success(function(data) {
-    //   console.log(data);
-    //   $scope.movies = data;
-    // });
+    GetMovieJson.success(function(data) {
+      console.log('data' + data);
+      $scope.movies = data;
+    });
     // $scope.searchedWords = SearchQuery.keyword;
     // console.log("Search Keyword:" + SearchQuery.keyword);
     // $scope.getData = function (titles, query) {
