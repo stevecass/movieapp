@@ -17,7 +17,7 @@ app.controller('ResultsCtrl', ['$scope', 'movies', function($scope, $filter, mov
     $scope.searchedWords = SearchQuery;
     console.log(SearchQuery);
     $scope.getData = function (titles, query) {
-      $scope.queryData = $filter('filter')(titles, query));
+      $scope.queryData = $filter('filter')(titles, query);
     };
 
 }]);
