@@ -1,5 +1,5 @@
 app.factory('movies', ['$http', function($http) {
-  return $http.get('movies.json')
+  return $http.get('http://mxngyn.com/movieapp/movies.json')
   .success(function(data) {
     return data;
   })
