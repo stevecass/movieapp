@@ -17,12 +17,10 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
     };
     $scope.getQuery = function() {
       $scope.factoryData = SearchQuery.getData();
-      console.log('factoryData' + $scope.factoryData);
     }
     $scope.factoryData = SearchQuery.getData();
     console.log('factoryData' + $scope.factoryData.keyword);
     GetMovieJson.success(function(data) {
-      console.log('data' + data);
       $scope.movies = data;
     });
 }]);
