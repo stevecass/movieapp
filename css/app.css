@@ -2,6 +2,13 @@ body {
   background-image: url('../imgs/bg.png');
   background-size: 100%;
   background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.reel {
+  font-weight: 600;
+  color: #ffc000;
 }
 
 /* LANDING VIEW */
