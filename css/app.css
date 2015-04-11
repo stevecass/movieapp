@@ -17,3 +17,30 @@ body {
   margin: 0 auto;
   width: 50%;
 }
+
+.landing-search {
+  position: relative;
+}
+
+.landing-search input {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+.landing-search input::-webkit-input-placeholder {
+  color: #FFF;
+}
+
+.landing-search input:-moz-placeholder {
+  color: #FFF;
+}
+
+.landing-search input::-moz-placeholder {
+  color: #FFF;
+}
+
+.landing-search input:-ms-input-placeholder {
+  color: #FFF;
+}
