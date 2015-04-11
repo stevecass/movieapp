@@ -1,3 +1,3 @@
-myApp.factory('SearchQuery', function (){
+app.factory('SearchQuery', [function (){
  return { keyword: '' };
-});
+}]);
