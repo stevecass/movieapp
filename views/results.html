@@ -1,5 +1,5 @@
  <input ng-model="queried.keyword" placeholder="Don't see what you're looking for? Search again!">
-<div class="movie-results" ng-repeat="movie in movies.movies | filter:factoryData.toy">
+<div class="movie-results" ng-repeat="movie in movies.movies | filter:factoryData.keyword">
   {{ factoryData }}
   {{ movie.title }}
 </div>
