@@ -15,7 +15,7 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', function($scope, GetMov
       $scope.movies = data;
     });
     $scope.searchedWords = SearchQuery;
-    console.log(SearchQuery);
+    console.log("Search Keyword:" + SearchQuery);
     $scope.getData = function (titles, query) {
       $scope.queryData = $filter('filter')(titles, query);
     };
