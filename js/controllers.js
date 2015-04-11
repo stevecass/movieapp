@@ -8,7 +8,9 @@ app.controller('AppCtrl', ['$scope', 'movies', 'SearchQuery', function($scope, m
   $scope.$watch('query', function (newValue, oldValue) {
       if (newValue !== oldValue) SearchQuery.setSearchQuery(newValue);
   });
-  $scope.logo = 'imgs/reelmovies_big.png'
+  $scope.logo = 'imgs/reelmovies_big.png';
+  $scope.search = 'imgs/search.png'
+  $scope.wheel = 'imgs/wheel_big.png'
 }]);
 
 app.controller('ResultsCtrl', ['$scope', 'movies', 'SearchQuery', function($scope, $filter, movies) {

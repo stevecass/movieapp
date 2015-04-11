@@ -3,3 +3,10 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+
+/* LANDING VIEW */
+
+.landing-view {
+  margin: 0 auto;
+  width: 50%;
+}
