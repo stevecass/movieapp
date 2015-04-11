@@ -1,7 +1,6 @@
 app.factory('SearchQuery', [function (queryWord) {
   keyword = "";
   function setData(queryWord) {
-    console.log(queryWord);
       keyword = queryWord;
   }
 

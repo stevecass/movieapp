@@ -25,8 +25,4 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
       console.log('data' + data);
       $scope.movies = data;
     });
-    // $scope.getData = function (titles, query) {
-    //   $scope.queryData = $filter('filter')(titles, query);
-    // };
-
 }]);
