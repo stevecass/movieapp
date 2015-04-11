@@ -19,7 +19,6 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
       $scope.factoryData = SearchQuery.getData();
     }
     $scope.factoryData = SearchQuery.getData();
-    console.log('factoryData' + $scope.factoryData.keyword);
     GetMovieJson.success(function(data) {
       $scope.movies = data;
     });
