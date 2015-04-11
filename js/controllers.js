@@ -9,8 +9,8 @@ app.controller('AppCtrl', ['$scope', function($scope, SearchQuery) {
 
 /* RESULTS PAGE CONTROLLER */
 
-app.controller('ResultsCtrl', ['$scope', 'movies', function($scope, $filter, movies, SearchQuery) {
-    movies.success(function(data) {
+app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', function($scope, $filter, GetMovieJson, SearchQuery) {
+    GetMovieJson.success(function(data) {
       console.log(data);
       $scope.movies = data;
     });
