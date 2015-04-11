@@ -1,4 +1,6 @@
-app.controller('AppCtrl', ['$scope', 'movies', 'SearchQuery', function($scope, movies) {
+/* LANDING PAGE CONTROLLER */
+
+app.controller('AppCtrl', ['$scope', 'movies', 'SearchQuery', function($scope, movies, SearchQuery) {
   $scope.name = "Reel Movies"
   movies.success(function(data) {
     console.log(data);
@@ -13,7 +15,9 @@ app.controller('AppCtrl', ['$scope', 'movies', 'SearchQuery', function($scope, m
   $scope.wheel = 'imgs/wheel_big.png'
 }]);
 
-app.controller('ResultsCtrl', ['$scope', 'movies', 'SearchQuery', function($scope, $filter, movies) {
+/* RESULTS PAGE CONTROLLER */
+
+app.controller('ResultsCtrl', ['$scope', 'movies', 'SearchQuery', function($scope, $filter, movies, SearchQuery) {
   $scope.name = "Reel Movies"
   movies.success(function(data) {
     console.log(data);
