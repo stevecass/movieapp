@@ -5,6 +5,8 @@ body {
   background-color: #465f71;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  padding: 0;
+  margin: 0;
 }
 
 .reel {
@@ -77,8 +79,17 @@ button:focus {
 
 /* HEADING & MOVIE CONTAINER */
 
+.heading {
+  text-align: center;
+  padding: 1% 0;
+  font-size: 2.5em;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #000;
+}
+
 .movie-container {
-  margin: 10% 0 0 5%;
+  padding: 1.5%;
   width: 100%;
   height: 100%;
+  background-color: #fff;
 }
