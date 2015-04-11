@@ -1,7 +1,15 @@
 app.factory('SearchQuery', [function (queryWord){
+  function setData(queryWord) {
+    console.log(queryWord);
+      keyword = queryWord;
+  }
+
   return {
-    keyword: function() {
-      return queryWord;
-    }
-  };
+      getData: function() {
+        return {
+          keyword: keyword,
+        }
+      },
+      setData: setData
+  }
 }]);
