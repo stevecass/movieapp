@@ -1,1 +1,7 @@
 {{ name }}
+
+Search: <input ng-model="query">
+
+<div ng-repeat="movie in movies | filter:query">
+          {{ movie.title }}
+</div>
