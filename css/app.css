@@ -20,9 +20,12 @@ body {
 
 .landing-search {
   position: relative;
+  border: 1px solid #FFF;
+  padding: 1%;
 }
 
 .landing-search input {
+  width: 92%;
   background-color: transparent;
   border: 0;
   font-size: 1.8em;
@@ -43,4 +46,13 @@ body {
 
 .landing-search input:-ms-input-placeholder {
   color: #FFF;
+}
+
+#searchicon {
+  margin: 0;
+  width: 3.5%
+}
+
+#landing-page-text {
+  font-size: 4em;
 }
