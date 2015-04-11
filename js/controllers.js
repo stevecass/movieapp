@@ -1,6 +1,6 @@
 /* LANDING PAGE CONTROLLER */
 
-app.controller('AppCtrl', ['$scope', function($scope, movies, SearchQuery) {
+app.controller('AppCtrl', ['$scope', function($scope, SearchQuery) {
   $scope.logo = 'imgs/reelmovies_big.png';
   $scope.search = 'imgs/search.png';
   $scope.wheel = 'imgs/wheel_big.png';
