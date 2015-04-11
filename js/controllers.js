@@ -12,6 +12,9 @@ app.controller('AppCtrl', ['$scope', 'SearchQuery', function($scope, SearchQuery
 /* RESULTS PAGE CONTROLLER */
 
 app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function($scope, GetMovieJson, SearchQuery) {
+    $scope.updateQuery = function() {
+      SearchQuery.setData($scope.query)
+    };
     $scope.getQuery = function() {
       $scope.factoryData = SearchQuery.getData();
       console.log('factoryData' + $scope.factoryData);
@@ -22,8 +25,6 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
       console.log('data' + data);
       $scope.movies = data;
     });
-    // $scope.searchedWords = SearchQuery.keyword;
-    // console.log("Search Keyword:" + SearchQuery.keyword);
     // $scope.getData = function (titles, query) {
     //   $scope.queryData = $filter('filter')(titles, query);
     // };
