@@ -4,7 +4,9 @@ app.controller('AppCtrl', ['$scope', function($scope, SearchQuery) {
   $scope.logo = 'imgs/reelmovies_big.png';
   $scope.search = 'imgs/search.png';
   $scope.wheel = 'imgs/wheel_big.png';
-  $scope.queried = SearchQuery;
+  $scope.queried = function(query) {
+    SearchQuery(query)
+  };
 }]);
 
 /* RESULTS PAGE CONTROLLER */
