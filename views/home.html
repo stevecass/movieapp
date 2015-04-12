@@ -5,8 +5,8 @@
   <div class="landing-search">
     <form ng-submit="updateQuery()" ng-controller="ResultsCtrl">
     <input ng-model="query" placeholder="Search and Find Any Movie in Seconds!" ng-change="">
+    <button type="submit" class="btn btn-primary"><img ng-src="{{ search }}" id="searchicon"></button>
     </form>
-    <a href="#results"><img ng-src="{{ search }}" id="searchicon"></a>
   </div>
 
 </div>
