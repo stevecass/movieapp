@@ -3,8 +3,9 @@
     <img ng-src="{{ wheel }}" id="landing-wheel"><span class="reel">Reel</span> Movies
   </p>
   <div class="landing-search">
+    <form ng-submit="changeView('results')" ng-controller="SearchCtrl">
     <input ng-model="query" placeholder="Search and Find Any Movie in Seconds!" ng-change="updateQuery()">
-    <a href="#results"><img ng-src="{{ search }}" id="searchicon"></a>
+  </form>
   </div>
 
 </div>
