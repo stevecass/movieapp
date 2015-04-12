@@ -4,11 +4,13 @@
   </div>
   <div class="movie-container">
     <form class="movie-search" ng-submit="getQuery()">
-    <input ng-model="query" placeholder="Don't see what you're looking for? Search again!" ng-change="updateQuery()">
+      <input ng-model="query" placeholder="Don't see what you're looking for? Search again!" ng-change="updateQuery()">
     </form>
     <div class="movie-results">
       <div class="movie" ng-repeat="movie in movies.movies | filter:factoryData.keyword">
-        <img ng-src="{{ movie.posters.thumbnail }}">
+        <a href="#/movies/{{$index}}">
+          <img ng-src="{{ movie.posters.thumbnail }}">
+        </a>
       </div>
     </div>
   </div>
