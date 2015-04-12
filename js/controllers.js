@@ -11,7 +11,7 @@ app.controller('AppCtrl', ['$scope', 'SearchQuery', function($scope, SearchQuery
 
 /* */
 
-app.controller('SearchCtrl', ['$scope', '$location', 'SearchQuery' function($scope, $location, SearchQuery) {
+app.controller('SearchCtrl', ['$scope', '$location', 'SearchQuery', function($scope, $location, SearchQuery) {
   $scope.changeView = function(view){
       $location.path(view);
   }
