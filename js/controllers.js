@@ -9,7 +9,7 @@ app.controller('AppCtrl', ['$scope', 'SearchQuery', function($scope, SearchQuery
   };
 }]);
 
-/* */
+/* SEARCH CONTROLLER */
 
 app.controller('SearchCtrl', ['$scope', '$location', 'SearchQuery', function($scope, $location, SearchQuery) {
   $scope.changeView = function(view){
@@ -35,3 +35,6 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
       $scope.movies = data;
     });
 }]);
+
+/* MOVIE SHOW CONTROLLER */
+
