@@ -88,23 +88,32 @@ button:focus {
 }
 
 .movie-container {
-  padding: 1.5%;
+  padding: 2.5% 0;
   width: 100%;
-  height: 100%;
   background-color: #fff;
+  text-align: center;
 }
 
 .movie-results {
-
+  width: 100%;
 }
 
 .movie {
-  width: 100%;
-  display: inline;
   padding: 1%;
+  width: 20%;
+  height: 300px;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .movie img {
-  width: 20%;
-  display: inline;
+  width: 100%;
+}
+
+.movie-container input {
+  width: 80%;
+  background-color: transparent;
+  border: 1;
+  font-size: 1.5em;
+  color: #000;
 }
