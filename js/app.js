@@ -1,3 +1,5 @@
+/* ANGULAR MODULE */
+
 var app = angular.module("ReelMovies", ['ngRoute']);
 
 
@@ -8,3 +10,5 @@ app.config(["$routeProvider", function ($routeProvider) {
     .when("/movies/:id", {controller: "MovieCtrl", templateUrl: "views/movie.html"})
     .otherwise({redirectTo: "/"})
 }])
+
+/* NON-ANGULAR JS */
