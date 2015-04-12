@@ -11,10 +11,13 @@ app.controller('AppCtrl', ['$scope', 'SearchQuery', function($scope, SearchQuery
 
 /* */
 
-app.controller('SearchCtrl', ['$scope', '$location', function($scope, $location) {
+app.controller('SearchCtrl', ['$scope', '$location', 'SearchQuery' function($scope, $location, SearchQuery) {
   $scope.changeView = function(view){
       $location.path(view);
   }
+  $scope.updateQuery = function() {
+    SearchQuery.setData($scope.query)
+  };
 }])
 
 
