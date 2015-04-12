@@ -38,3 +38,8 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
 
 /* MOVIE SHOW CONTROLLER */
 
+app.controller('MovieCtrl', ['$scope', 'GetMovieJson', '$routeParams', function($scope, GetMovieJson, $routeParams) {
+    GetMovieJson.success(function(data) {
+      $scope.detail = data[$routeParams.id];
+    });
+}]);
