@@ -8,7 +8,7 @@
     </form>
     <div class="movie-results">
       <div class="movie" ng-repeat="movie in movies.movies | filter:factoryData.keyword">
-        <a href="#/movies/{{ $index }}">
+        <a href="#/movies/{{ movie.id }}">
           <img ng-src="{{ movie.posters.thumbnail }}">
         </a>
       </div>
