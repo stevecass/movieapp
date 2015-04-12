@@ -3,8 +3,10 @@
     <img ng-src="{{ wheel }}" id="landing-wheel"><span class="reel">Reel</span> Movies
   </p>
   <div class="landing-search">
-    <input ng-model="query" placeholder="Search and Find Any Movie in Seconds!" ng-change="updateQuery()">
+    <form ng-submit="updateQuery()" ng-controller="AppCrtl">
+    <input ng-model="query" placeholder="Search and Find Any Movie in Seconds!" ng-change="">
     <a href="#results"><img ng-src="{{ search }}" id="searchicon"></a>
+    </form>
   </div>
 
 </div>
