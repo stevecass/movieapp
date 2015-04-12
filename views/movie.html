@@ -1,0 +1,17 @@
+<div class="movie-view">
+  <div class="heading">
+    <span class="reel">Reel</span> Movies
+  </div>
+  <div class="movie-container">
+    {{ detail.title }}
+    {{ detail.genres }}
+    {{ detail.mpaa_rating }}
+    {{ detail.runtime }}
+    {{ detail.critics_consensus }}
+    {{ detail.ratings.critics_score }}
+    {{ detail.synopsis }}
+    <img ng-src="{{ detail.posters.thumbnail }}">
+    {{ detail.abridged_directors[0].name }}
+    {{ detail.box_office }}
+  </div>
+</div>
