@@ -3,9 +3,8 @@
     <span class="reel">Reel</span> Movies
   </div>
   <div class="movie-container">
-    <form class="movie-search">
+    <form class="movie-search" ng-submit="getQuery()">
     <input ng-model="query" placeholder="Don't see what you're looking for? Search again!" ng-change="updateQuery()">
-    <input type="submit" ng-click="getQuery()" value="Search Again" />
     </form>
     <div class="movie-results">
       <div class="movie" ng-repeat="movie in movies.movies | filter:factoryData.keyword">
