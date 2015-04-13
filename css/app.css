@@ -101,7 +101,7 @@ button:focus {
 .movie {
   padding: 1%;
   width: 250px;
-  height: 300px;
+  height: 440px;
   overflow: hidden;
   display: inline-block;
 }
@@ -129,8 +129,8 @@ button:focus {
   background-color: #ccc;
   overflow: hidden;
   color: #FFF;
-  top: 430px;
-  position: absolute;
+  top: 390px;
+  position: relative;
   z-index: 100;
 }
 
