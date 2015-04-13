@@ -23,13 +23,3 @@ app.directive('onFinishRender', function ($timeout) {
     }
   }
 });
-
-/* NON-ANGULAR JS */
-
-if($(".percentage")){
-  $(".percentage").each(function(){
-    var percentageNum = parseInt(this.children[0].innerHTML);
-    var moveFromTop = 100 - percentageNum;
-    $(this).css("top", moveFromTop + "%" );
-  });
-}
