@@ -1,6 +1,6 @@
 /* ANGULAR MODULE */
 
-var app = angular.module("ReelMovies", ['ngRoute']);
+var app = angular.module("ReelMovies", ['ngRoute', 'ngResource']);
 
 
 app.config(["$routeProvider", function ($routeProvider) {

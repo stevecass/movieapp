@@ -3,18 +3,18 @@
     <span class="reel">Reel</span> Movies
   </div>
   <div class="movie-container">
-    <form class="movie-search" ng-submit="getQuery()">
+    <form class="movie-search" ng-submit="fetchResults()">
       <input ng-model="query" placeholder="Don't see what you're looking for? Search again!" ng-change="updateQuery()">
     </form>
     <div class="movie-results">
-      <div class="movie" ng-repeat="movie in movies.movies | filter:factoryData.keyword" on-finish-render="movieresults">
+      <div class="movie" ng-repeat="movie in movies | filter:factoryData.keyword" on-finish-render="movieresults">
         <a href="#/movies/{{ $index }}">
           <div class="gray-circle">
             <span class="percent">{{ movie.ratings.critics_score }}%</span>
             <div class="percentage">
             </div>
           </div>
-          <img ng-src="{{ movie.posters.thumbnail }}">
+          <img ng-src="{{ movie.posters.original }}">
         </a>
       </div>
     </div>

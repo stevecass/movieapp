@@ -4,36 +4,30 @@ app.controller('AppCtrl', ['$scope', 'SearchQuery', function($scope, SearchQuery
   $scope.logo = 'imgs/reelmovies_big.png';
   $scope.search = 'imgs/search.png';
   $scope.wheel = 'imgs/wheel_big.png';
-  $scope.updateQuery = function() {
-    SearchQuery.setData($scope.query)
-  };
 }]);
-
-/* SEARCH CONTROLLER */
-
-app.controller('SearchCtrl', ['$scope', '$location', 'SearchQuery', function($scope, $location, SearchQuery) {
-  $scope.changeView = function(view){
-    $location.path(view);
-  }
-  $scope.updateQuery = function() {
-    SearchQuery.setData($scope.query)
-  };
-}])
-
 
 /* RESULTS PAGE CONTROLLER */
 
-app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function($scope, GetMovieJson, SearchQuery) {
+app.controller('ResultsCtrl', function($scope, $http, SearchQuery, GetMovieJson, $location){
   $scope.updateQuery = function() {
     SearchQuery.setData($scope.query)
   };
   $scope.getQuery = function() {
     $scope.factoryData = SearchQuery.getData();
+    $scope.fetchResults();
   }
-  $scope.factoryData = SearchQuery.getData();
-  GetMovieJson.success(function(data) {
-    $scope.movies = data;
-  });
+  $scope.fetchResults = function(){
+    console.log('term', SearchQuery.getData());
+    var dfd = GetMovieJson.query({q: SearchQuery.getData().keyword });
+    dfd.$promise.then(function(data){
+      console.log(data.movies);
+      return $scope.movies = data.movies;
+    });
+  }
+  $scope.changeView = function(view){
+    $location.path(view);
+  }
+
   $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
     $(".gray-circle").each(function(){
       var percentageNum = parseInt($(this).children('span')[0].innerHTML);
@@ -53,7 +47,7 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
       }
     });
   });
-}]);
+});
 
 /* MOVIE SHOW CONTROLLER */
 
