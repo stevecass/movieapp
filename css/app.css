@@ -117,3 +117,30 @@ button:focus {
   font-size: 1.5em;
   color: #000;
 }
+
+/* PERCENTAGE CIRCLE */
+
+.gray-circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  overflow: hidden;
+  color: #FFF;
+  left: -10px;
+  top: 315px;
+}
+
+.percentage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.percent {
+  color: #fff;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
