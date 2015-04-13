@@ -11,6 +11,11 @@
         <a href="#/movies/{{ $index }}">
           <img ng-src="{{ movie.posters.thumbnail }}">
         </a>
+        <div class="gray-circle">
+          <div class="percentage">
+            <span class="percent">{{ movie.ratings.critics_score }}</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
