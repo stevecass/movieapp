@@ -78,6 +78,25 @@
       },
       "abridged_directors": [{"name": "Kenneth Branagh"}],
       "box_office": "$167.1M"
+    },
+    {
+      "title": "Home",
+      "genres": [
+        "Animation"
+      ],
+      "mpaa_rating": "PG (for mild thematic elements)",
+      "runtime": 93,
+      "critics_consensus": "Colorful, silly, and utterly benign, Home is a passable diversion, but there's no shortage of superior animated alternatives.",
+      "ratings": {
+        "critics_score": 47,
+        "audience_score": 69
+      },
+      "synopsis": "When Oh, a loveable misfit from another planet, lands on Earth and finds himself on the run from his own people, he forms an unlikely friendship with an adventurous girl named Tip who is on a quest of her own. Through a series of comic adventures with Tip, Oh comes to understand that being different and making mistakes is all part of being human. And while he changes her planet and she changes his world, they discover the true meaning of the word HOME. (c) Fox",
+      "posters": {
+          "thumbnail": "http://content6.flixster.com/movie/11/18/17/11181778_ori.jpg"
+      },
+      "abridged_directors": [{"name": "Tim Johnson"}],
+      "box_office": "$95.2M"
     }
   ]
 }
