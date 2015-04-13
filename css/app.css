@@ -92,6 +92,7 @@ button:focus {
   width: 100%;
   background-color: #fff;
   text-align: center;
+  overflow: auto;
 }
 
 .movie-results {
@@ -150,4 +151,14 @@ button:focus {
   top: 12px;
   font-weight: 600;
   font-size: 1.5em;
+}
+
+/* MOVIE DETAIL PAGE */
+
+.movie-container .left {
+  float: left;
+}
+
+.movie-container .right {
+  float: right;
 }
