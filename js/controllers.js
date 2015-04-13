@@ -35,7 +35,13 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
       $scope.movies = data;
     });
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
-      console.log("test");
+      if($(".percentage")){
+        $(".percentage").each(function(){
+          var percentageNum = parseInt(this.children[0].innerHTML);
+          var moveFromTop = 100 - percentageNum;
+          $(this).css("top", moveFromTop + "%" );
+        });
+      }
     });
 }]);
 
