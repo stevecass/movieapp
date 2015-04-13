@@ -38,8 +38,9 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
     $(".gray-circle").each(function(){
       var percentageNum = parseInt($(this).children('span')[0].innerHTML);
       var moveFromTop = 100 - percentageNum;
+      var coloredPart = $(this).children('div');
       if(percentageNum > 80) {
-        $(this).css({"top": moveFromTop + "%", "background-color": "#86c60c"});
+        coloredPart.css({"top": moveFromTop + "%", "background-color": "#86c60c"});
       }
       else if (percentageNum > 60) {
         $(this).css({"top": moveFromTop + "%", "background-color": "#ffc000"});
