@@ -159,6 +159,12 @@ button:focus {
   float: left;
 }
 
+.left img {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
 .movie-container .right {
   float: right;
 }
