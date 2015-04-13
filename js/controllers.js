@@ -61,4 +61,7 @@ app.controller('MovieCtrl', ['$scope', 'GetMovieJson', '$routeParams', function(
   GetMovieJson.success(function(data) {
     $scope.detail = data.movies[$routeParams.id];
   });
+  $scope.goBack = function() {
+    window.history.back();
+  };
 }]);
