@@ -38,8 +38,17 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
     $(".percentage").each(function(){
       var percentageNum = parseInt(this.children[0].innerHTML);
       var moveFromTop = 100 - percentageNum;
-      if(moveFromTop < 10){
-      $(this).css({"top": moveFromTop + "%", "background-color": "#86c60c"});
+      if(percentageNum > 80) {
+        $(this).css({"top": moveFromTop + "%", "background-color": "#86c60c"});
+      }
+      else if (percentageNum > 60) {
+        $(this).css({"top": moveFromTop + "%", "background-color": "#ffc000"});
+      }
+      else if (percentageNum > 40) {
+        $(this).css({"top": moveFromTop + "%", "background-color": "#e8e642"});
+      }
+      else {
+        $(this).css({"top": moveFromTop + "%", "background-color": "#ff0000"});
       }
     });
   });
