@@ -8,12 +8,12 @@
     </form>
     <div class="movie-results">
       <div class="movie" ng-repeat="movie in movies.movies | filter:factoryData.keyword" on-finish-render="movieresults">
-        <div class="gray-circle">
-          <span class="percent">{{ movie.ratings.critics_score }}%</span>
-          <div class="percentage">
-          </div>
-        </div>
         <a href="#/movies/{{ $index }}">
+          <div class="gray-circle">
+            <span class="percent">{{ movie.ratings.critics_score }}%</span>
+            <div class="percentage">
+            </div>
+          </div>
           <img ng-src="{{ movie.posters.thumbnail }}">
         </a>
       </div>

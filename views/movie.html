@@ -5,19 +5,38 @@
   <div class="movie-container">
     <div class="left">
       <a ng-click="goBack()">GO BACK</a>
-      <img ng-src="{{ detail.posters.thumbnail }}">
+      <div class="movie-img">
+        <div class="gray-circle">
+          <span class="percent">{{ detail.ratings.critics_score }}%</span>
+          <div class="percentage">
+          </div>
+        </div>
+        <img ng-src="{{ detail.posters.thumbnail }}">
+      </div>
     </div>
     <div class="right">
     </div>
-    This should show a single movie.
     {{ detail.title }}
+    <strong>Critics Consensus:</strong> {{ detail.critics_consensus }}
+    <div class="reel-trio-row">
+      <div class="reel-trio-left">
+        {{ detail.box_office }}
+      </div>
+      <div class="reel-trio-middle">
+        {{ detail.runtime }}
+      </div>
+      <div class="reel-trio-right">
+        {{ detail.mpaa_rating[0..1] }}
+      </div>
+    </div>
+    <div class="movie-info">
+    </div>
     {{ detail.genres }}
-    {{ detail.mpaa_rating }}
-    {{ detail.runtime }}
-    {{ detail.critics_consensus }}
+
+
     {{ detail.ratings.critics_score }}
     {{ detail.synopsis }}
     {{ detail.abridged_directors[0].name }}
-    {{ detail.box_office }}
+
   </div>
 </div>
