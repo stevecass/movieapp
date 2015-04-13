@@ -35,8 +35,8 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
     $scope.movies = data;
   });
   $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
-    $(".percentage").each(function(){
-      var percentageNum = parseInt(this.closest('.gray-circle').children());
+    $(".gray-circle").each(function(){
+      var percentageNum = parseInt(this.children('span').innerHTML);
       var moveFromTop = 100 - percentageNum;
       if(percentageNum > 80) {
         $(this).css({"top": moveFromTop + "%", "background-color": "#86c60c"});
