@@ -1,5 +1,5 @@
 { "movies": [
-    { "id": "1",
+    {
       "title": "Toy Story 3",
       "genres": [
         "Animation",
@@ -22,7 +22,6 @@
       "box_office": "$415.0M"
     },
     {
-      "id": "2",
       "title": "Furious 7",
       "genres": [
         "Mystery & Suspense",
@@ -41,6 +40,44 @@
       },
       "abridged_directors": [{"name": "James Wan"}],
       "box_office": "$147.2M"
+    },
+    {
+      "title": "Get Hard",
+      "genres": [
+        "Comedy"
+      ],
+      "mpaa_rating": "R (for pervasive crude and sexual content and language, some graphic nudity, and drug material)",
+      "runtime": 100,
+      "critics_consensus": "A waste of two fine funnymen, Get Hard settles for tired and offensive gags instead of tapping into its premise's boundary-pushing potential.",
+      "ratings": {
+        "critics_score": 29,
+        "audience_score": 58
+      },
+      "synopsis": "Will Ferrell and Kevin Hart headline this Warner Bros. comedy about a wrongfully convicted investment banker who prepares for prison life with the help of the man who washes his car. Etan Cohen directs, with Ian Roberts and Jay Martel handling screenwriting duties. ~ Jason Buchanan, Rovi",
+      "posters": {
+          "thumbnail": "http://content6.flixster.com/movie/11/18/91/11189122_ori.jpg"
+      },
+      "abridged_directors": [{"name": "Etan Cohen"}],
+      "box_office": "$57.2M"
+    },
+    {
+      "title": "Cinderella",
+      "genres": [
+        "Science Fiction & Fantasy", "Romance"
+      ],
+      "mpaa_rating": "PG (for mild thematic elements)",
+      "runtime": 105,
+      "critics_consensus": "Refreshingly traditional in a revisionist era, Kenneth Branagh's Cinderella proves Disney hasn't lost any of its old-fashioned magic.",
+      "ratings": {
+        "critics_score": 84,
+        "audience_score": 85
+      },
+      "synopsis": "Cate Blanchett stars in this new vision of the Cinderella tale from director Kenneth Branagh and the screenwriting team of Chris Weitz and Aline Brosh McKenna for Disney Pictures. ~ Jeremy Wheeler, Rovi",
+      "posters": {
+          "thumbnail": "http://content6.flixster.com/movie/11/18/15/11181570_ori.jpg"
+      },
+      "abridged_directors": [{"name": "Kenneth Branagh"}],
+      "box_office": "$167.1M"
     }
   ]
 }
