@@ -3,6 +3,12 @@
     <span class="reel">Reel</span> Movies
   </div>
   <div class="movie-container">
+    <div class="left">
+      <a ng-click="goBack()">GO BACK</a>
+      <img ng-src="{{ detail.posters.thumbnail }}">
+    </div>
+    <div class="right">
+    </div>
     This should show a single movie.
     {{ detail.title }}
     {{ detail.genres }}
@@ -11,7 +17,6 @@
     {{ detail.critics_consensus }}
     {{ detail.ratings.critics_score }}
     {{ detail.synopsis }}
-    <img ng-src="{{ detail.posters.thumbnail }}">
     {{ detail.abridged_directors[0].name }}
     {{ detail.box_office }}
   </div>
