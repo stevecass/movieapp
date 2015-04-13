@@ -34,6 +34,9 @@ app.controller('ResultsCtrl', ['$scope', 'GetMovieJson', 'SearchQuery', function
     GetMovieJson.success(function(data) {
       $scope.movies = data;
     });
+    $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
+      console.log("test");
+    });
 }]);
 
 /* MOVIE SHOW CONTROLLER */
