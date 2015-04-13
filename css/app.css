@@ -108,6 +108,8 @@ button:focus {
 
 .movie img {
   width: 100%;
+  position: relative;
+  left: 15px;
 }
 
 .movie-container input {
@@ -122,13 +124,14 @@ button:focus {
 
 .gray-circle {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background-color: #ccc;
   overflow: hidden;
   color: #FFF;
-  left: -10px;
-  top: 315px;
+  top: 430px;
+  position: absolute;
+  z-index: 100;
 }
 
 .percentage {
