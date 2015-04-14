@@ -9,7 +9,7 @@ app.controller('AppCtrl', ['$scope', 'SearchQuery', function($scope, SearchQuery
 
 /* RESULTS PAGE CONTROLLER */
 
-app.controller('ResultsCtrl', function($scope, $http, SearchQuery, GetMovieJson, $location){
+app.controller('ResultsCtrl', function($scope, $http, SearchQuery, GetMovieJson, $location, $routeParams){
   $scope.updateQuery = function() {
     SearchQuery.setData($scope.query)
   };
@@ -25,8 +25,13 @@ app.controller('ResultsCtrl', function($scope, $http, SearchQuery, GetMovieJson,
       console.log($scope.movies);
     });
   }
-  $scope.changeView = function(view){
-      $location.path(view);
+  $scope.changeView = function(view, params){
+      if ($scope.query) {
+        $location.path(view).search({query: $scope.query});
+      } else {
+        $location.path(view);
+      }
+
   }
 
   $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
@@ -48,6 +53,13 @@ app.controller('ResultsCtrl', function($scope, $http, SearchQuery, GetMovieJson,
       }
     });
   });
+
+  if ($routeParams.query) {
+    SearchQuery.setData($routeParams.query);
+    $scope.fetchResults();
+  }
+
+
 });
 
 /* MOVIE SHOW CONTROLLER */
