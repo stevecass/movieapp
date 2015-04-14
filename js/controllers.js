@@ -6,6 +6,7 @@ app.controller('AppCtrl', ['$scope', 'SearchQuery', function($scope, SearchQuery
   $scope.wheel = 'imgs/wheel_big.png';
 }]);
 
+
 /* RESULTS PAGE CONTROLLER */
 
 app.controller('ResultsCtrl', function($scope, $http, SearchQuery, GetMovieJson, $location){
@@ -20,12 +21,12 @@ app.controller('ResultsCtrl', function($scope, $http, SearchQuery, GetMovieJson,
     console.log('term', SearchQuery.getData());
     var dfd = GetMovieJson.query({q: SearchQuery.getData().keyword });
     dfd.$promise.then(function(data){
-      console.log(data.movies);
-      return $scope.movies = data.movies;
+      $scope.movies = data.movies;
+      console.log($scope.movies);
     });
   }
   $scope.changeView = function(view){
-    $location.path(view);
+      $location.path(view);
   }
 
   $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
